@@ -1,0 +1,7 @@
+# Generated folders
+node_modules
+dist
+
+# Environment variables
+.env
+
