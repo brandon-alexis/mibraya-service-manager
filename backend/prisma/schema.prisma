@@ -15,7 +15,7 @@ datasource db {
 
 model Client {
   id      String   @id @default(uuid())
-  name    String
+  name    String   @unique
   records Record[]
 }
 
@@ -32,4 +32,10 @@ model Record {
   clientId String
   services Service[]
   date     DateTime  @default(now())
+}
+
+model User {
+  id       String @id @default(uuid())
+  email    String @unique
+  password String
 }
