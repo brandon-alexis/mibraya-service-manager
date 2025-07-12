@@ -28,7 +28,6 @@ folders.filter((dirname) => {
       }
 
       router.use(`/api/${dirname}`, module.router)
-      console.log(`Importado con exito /api/${dirname}...`)
     })
   })
 })
