@@ -47,7 +47,9 @@ export class ClientService {
     const foundClients = await this.clientRepository.getAll()
 
     const foundClientByName = foundClients.find(
-      (_client) => _client.getName() == client.getName()
+      (_client) =>
+        _client.getId() !== foundClient.getId() &&
+        _client.getName() == client.getName()
     )
 
     if (foundClientByName) {
